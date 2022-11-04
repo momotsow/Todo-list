@@ -2,7 +2,6 @@ import './styles/style.css';
 import edit from './edit.js' //eslint-disable-line
 export const taskSection = document.querySelector('.tasks');
 const userTask = document.querySelector('.user-task');
-const clearAllCompleted = document.querySelector('.clearAll');
 export let todos = JSON.parse(localStorage.getItem('task')) || [];//eslint-disable-line
 let MOOD = 'CREATE';
 let tmp;
