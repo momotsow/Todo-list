@@ -2,7 +2,7 @@
 
 # To Do List
 
-> "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
+> "Todo list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
 
 
 ## Built With
@@ -14,18 +14,22 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link]()
+[Live Demo Link](https://momotsow.github.io/Todo-list//dist/)
 
 
 ## Getting Started
 
-Run index.html.
-
+- Create a folder into your storage device.
+- Open a command line Terminal and go to the new folder.
+- Execute: 'git clone https://github.com/momotsow/Todo-list.git'
+- Open terminal and dir to Todo-list.git
+- Run npm install
+- Run npm run build
+- Run npm start then visit http://localhost:8080 in your browser.
+- 
 ### Prerequisites
 This website requires Javascript to be enabled in your browser.
 ### Deployment
-
-
 
 ## Authors
 
