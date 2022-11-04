@@ -1,7 +1,8 @@
 import './styles/style.css';
-import edit from './edit.js' //eslint-disable-line
+import change from './edit.js' //eslint-disable-line
 export const taskSection = document.querySelector('.tasks');
 const userTask = document.querySelector('.user-task');
+const clearAllCompleted = document.querySelector('.clearAll');
 export let todos = JSON.parse(localStorage.getItem('task')) || [];//eslint-disable-line
 let MOOD = 'CREATE';
 let tmp;
@@ -88,4 +89,10 @@ taskSection.addEventListener('click', (e) => {
   }
 });
 
-edit();
+change();
+clearAllCompleted.addEventListener('click', () => {
+  todos = todos.filter((task) => task.status === false);
+  displayTask(todos);
+  updateIndex();
+  localStorage.setItem('task', JSON.stringify(todos));
+});
