@@ -7,16 +7,11 @@
 }
 
 body {
-  background-color: #F0EBD8;
+  background-color: #f0ebd8;
   font-family: 'Lucida Sans', sans-serif;
   min-height: 100vh;
   scroll-behavior: smooth;
 }
-
-/* .card {
-    max-width: 500px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-} */
 
 .container {
   margin: 80px auto;
@@ -37,15 +32,14 @@ body {
 .container button {
   cursor: pointer;
   outline: none;
-  background-color: #F50057;    
+  background-color: #f50057;
   color: #fff;
   border: none;
-  border-radius: 6px;  
+  border-radius: 6px;
   padding: 1rem;
   width: 90%;
   font-size: 18px;
   font-weight: 700;
-  
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
