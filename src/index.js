@@ -1,4 +1,4 @@
-import './style.css';
+import './styles/style.css';
 import edit from './edit.js' //eslint-disable-line
 export const taskSection = document.querySelector('.tasks');
 const userTask = document.querySelector('.user-task');
@@ -14,41 +14,24 @@ class Task {
   }
 }
 
-const fillTasksList = (todos) => {
-  todos = todos.sort((a, b) => a.index - b.index);
-  document.getElementById('todolist').innerHTML = '';
-  todos.forEach((element) => {
-    document.getElementById('todolist').innerHTML += `
-    <li class="task" id="${element.index}">
-      <span>
-      <input type="checkbox" id="check${element.index}" class=${element.completed ? 'inputChecked' : ''} ${element.completed ? 'checked' : ''}>
-      <label for="check${element.index}" class=${element.completed ? 'labelChecked' : ''}>${element.description}</label>
-      </span>
-      <span class="hamburger" id="button${element.index}">&#8942;</span>
-      </li>
-    `;
-  });
+const displayTask = (todos) => {
+  taskSection.innerHTML = '';
+  for (let i = 0; i < todos.length; i += 1) {
+    taskSection.innerHTML += `
+  <div class="one-task" id=${i}>
+    <div class="data">
+      <input id=${i} class="checkBoxClass" type="checkbox" ${
+  todos[i].status ? 'checked' : ''
+}>
+      <p id=${i} class="${todos[i].status ? 'checked' : ''} description">${
+  todos[i].task
+}</p>
+    </div>
+    <span class="span">&cross;</span>
+  </div>
+  `;
+  }
 };
-
-
-// const displayTask = (todos) => {
-//   taskSection.innerHTML = '';
-//   for (let i = 0; i < todos.length; i += 1) {
-//     taskSection.innerHTML += `
-//   <div class="one-task" id=${i}>
-//     <div class="data">
-//       <input id=${i} class="checkBoxClass" type="checkbox" ${
-//   todos[i].status ? 'checked' : ''
-// }>
-//       <p id=${i} class="${todos[i].status ? 'checked' : ''} description">${
-//   todos[i].task
-// }</p>
-//     </div>
-//     <span class="span">&cross;</span>
-//   </div>
-//   `;
-//   }
-// };
 
 const addTask = () => {
   if (MOOD === 'CREATE') {
@@ -112,10 +95,4 @@ clearAllCompleted.addEventListener('click', () => {
   displayTask(todos);
   updateIndex();
   localStorage.setItem('task', JSON.stringify(todos));
-});
-
-window.addEventlistener('load', () => {
-  const tasks = [{ description: 'wash the dishes', completed: false, index: 0 },
-    { description: 'complete To do list', completed: true, index: 1 }];
-  fillTasksList(tasks);
 });

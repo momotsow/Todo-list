@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <title>Todolist</title>
     
 </head>
 <body>
-<main>
-    <div class="listElement">
-        <h1>Today's To Do</h1>
-    </div>
-    <div class="listElement">
-        <form action="#">
-            <input type="text" placeholder="Add to your list...">
-        </form>
-    </div>
+    <main>
+        <section class="container">
+            <h1> Today's TodoList </h1>
+            <div class="header">
+             <div class="input">
+              <input class="user-task" type="text" placeholder="Enter your Task ">
+             </div>
+             <i></i>
+            </div>
+            <div class="tasks">
+            </div>
+            <button class="clearAll" type="button"> Clear All Completed Tasks</button>
+          </section>
+          <script src="main.js"></script>
+    </main>
     
-    <ul id="todolist" class="listElement">
-    </ul>
-    <button type="button" class="listElement">Clear all completed</button>
-    <script src="main.js"></script>
-</main>
 </body>
 </html>
