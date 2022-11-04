@@ -90,9 +90,3 @@ taskSection.addEventListener('click', (e) => {
 });
 
 edit();
-clearAllCompleted.addEventListener('click', () => {
-  todos = todos.filter((task) => task.status === false);
-  displayTask(todos);
-  updateIndex();
-  localStorage.setItem('task', JSON.stringify(todos));
-});
